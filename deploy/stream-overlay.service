@@ -1,0 +1,17 @@
+[Unit]
+Description=Stream Overlay Web Server
+After=network.target
+
+[Service]
+Type=simple
+User=streamoverlay
+Group=streamoverlay
+WorkingDirectory=/opt/stream-overlay
+Environment=NODE_ENV=production
+Environment=PORT=3000
+ExecStart=/usr/bin/npm start
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
