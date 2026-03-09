@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "vite build",
+    "deploy": "gcloud run deploy stream-overlay --source . --region europe-west1 --allow-unauthenticated --cpu 200m --memory 128Mi --min-instances 0 --max-instances 1 --quiet",
     "start": "node server.js",
     "preview": "vite preview",
     "clean": "rm -rf dist",

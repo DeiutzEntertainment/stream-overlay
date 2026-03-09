@@ -1,5 +1,10 @@
 # History
 
+## 2026-03-09
+
+- Added an npm `deploy` script for Google Cloud Run using the `stream-overlay` service in the active local `gcloud` project and region `europe-west1`.
+- Documented the Cloud Run deployment command and its runtime limits: public access, `200m` CPU, `128Mi` memory, `min-instances=0`, and `max-instances=1`.
+
 ## 2026-03-08
 
 - Added a proper repository `.gitignore` for Node/Vite build artifacts, dependencies, logs, local env files, and editor files.

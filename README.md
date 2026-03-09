@@ -44,6 +44,7 @@ Browser-source overlays for JDeiutz built with Vite, React, TypeScript, Motion, 
 - Install dependencies: `npm install`
 - Run dev server: `npm run dev`
 - Build production files: `npm run build`
+- Deploy to Cloud Run: `npm run deploy`
 - Start the production server: `npm start`
 - Type-check: `npm run lint`
 
@@ -135,6 +136,28 @@ docker run -d \
 ```
 
 That keeps the app listening on port `3000` inside the container while exposing it on `8080` on the Linux host.
+
+## Cloud Run
+
+This repo can be deployed directly to Google Cloud Run from the workspace with the built-in npm script:
+
+```bash
+npm run deploy
+```
+
+That command deploys the service as:
+
+- service name: `stream-overlay`
+- project: active `gcloud` project
+- region: `europe-west1`
+- public access: enabled
+- CPU limit: `200m`
+- memory limit: `128Mi`
+- minimum instances: `0`
+- maximum instances: `1`
+
+The `0` minimum instance setting allows the service to scale down to zero when idle.
+The deploy script uses whichever Google Cloud project is currently selected in your local `gcloud` configuration.
 
 ## Documentation Rules
 
