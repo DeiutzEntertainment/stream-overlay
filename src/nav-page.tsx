@@ -43,12 +43,12 @@ export default function NavPage() {
               <div className="space-y-3">
                 <h2 className="font-orbitron text-3xl font-bold text-white">Set Start Time</h2>
                 <p className="max-w-2xl text-sm leading-6 text-slate-300">
-                  Enter the stream start time in EEST. The Starting Soon page will count down to that exact time and show all hour mentions as EEST.
+                   Enter the stream start time in UTC+3:00. The Starting Soon page will count down to that exact time and show all hour mentions as UTC+3:00.
                 </p>
               </div>
               <div className="flex flex-col gap-3 md:items-end">
                 <label className="text-xs font-bold uppercase tracking-[0.3em] text-slate-400" htmlFor="start-time">
-                  Start Time (EEST)
+                  Start Time (UTC+3:00)
                 </label>
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
                   <input

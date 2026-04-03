@@ -1,5 +1,9 @@
 # History
 
+## 2026-04-03
+
+- Fixed incorrect EEST timezone offset in the Starting Soon countdown: changed `EEST_OFFSET_HOURS` from `2` to `3` (EEST is UTC+3; UTC+2 is EET, the winter variant). The wrong value caused the countdown to run ~1 hour ahead of the correct remaining time.
+
 ## 2026-03-09
 
 - Added an npm `deploy` script for Google Cloud Run using the `stream-overlay` service in the active local `gcloud` project and region `europe-west1`.

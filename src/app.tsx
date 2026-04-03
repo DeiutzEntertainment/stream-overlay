@@ -3,7 +3,7 @@ import {useEffect, useState} from 'react';
 import {OverlayCard, OverlayShell} from './overlay-shell';
 
 const DEFAULT_START_TIME = '20:00';
-const EEST_OFFSET_HOURS = 2;
+const EEST_OFFSET_HOURS = 3;
 
 function isValidTime(value: string) {
   return /^([01]\d|2[0-3]):([0-5]\d)$/.test(value);
